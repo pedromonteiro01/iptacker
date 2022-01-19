@@ -14,7 +14,7 @@ try:
     print("ISP: "+data['isp'])
     print("AS: "+data['as'])
     
-    filepath = '/home/pedro/Desktop/Programar/iptracker/map.html'
+    filepath = '/home/pedro/Desktop/iptracker/map.html'
     m = folium.Map(location=[float(data['lat']), float(data['lon'])], zoom_start=10.5)
     folium.Marker([float(data['lat']), float(data['lon'])], popup=ip).add_to(m)
     m.save(filepath)
